@@ -15,9 +15,9 @@
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     <% if logged_in? %>
-      <%= link_to "タスク一覧", tasks_path, id: "tasks-index" %></a>
-      <%= link_to "タスクを登録する", new_task_path, id: "new-task" %></a>
-      <%= link_to "アカウント", user_path(current_user.id), id: "my-account" %>
+      <%= link_to "タスク一覧", tasks_path, method: :get, id: "tasks-index" %></a>
+      <%= link_to "タスクを登録する", new_task_path, method: :get, id: "new-task" %></a>
+      <%= link_to "アカウント", user_path(current_user.id), method: :get,id: "my-account" %>
       <%= link_to "ログアウト", session_path(current_user.id), method: :delete, id: "sign-out" %>
     <% else %>
       <%= link_to "アカウント登録", new_user_path, id: "sign-up" %>

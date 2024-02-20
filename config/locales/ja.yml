@@ -30,6 +30,9 @@ ja:
     destroy: 削除
     back: 戻る
     confirm_destroy: 本当に削除してもよろしいですか？
+  sessions:
+    new:
+      title: ログインページ
   tasks:
     index:
       title: タスク一覧ページ
