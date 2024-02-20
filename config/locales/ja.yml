@@ -1,9 +1,10 @@
 ja:
-  activerecord:
+ activerecord:
     models:
       task: タスク
-      user: ユーザー
-    attributes:  #関連する、カラムと一緒の認識で今はOK。
+      user: ユーザ
+      session: セッション
+    attributes:
       task:
         title: タイトル
         content: 内容
@@ -11,18 +12,23 @@ ja:
         name: 名前
         email: メールアドレス
         password: パスワード
-        password_confirm: パスワード（確認）
-        confirmation: とパスワードの入力が一致しません
+        password_confirmation: パスワード（確認）
   errors:
     format: "%{attribute}%{message}"
     messages:
       blank: を入力してください
-      invalid: が無効です
+      invalid: は適切ではありません
       too_short: は6文字以上で入力してください
+      taken: はすでに使用されています
+      confirmation: とパスワードの入力が一致しません
   helpers:
     submit:
       create: 登録する
       update: 更新する
+    label:
+      session:
+        email: メールアドレス
+        password: パスワード
   common:
     new: 新規作成
     show: 詳細
@@ -30,9 +36,6 @@ ja:
     destroy: 削除
     back: 戻る
     confirm_destroy: 本当に削除してもよろしいですか？
-  sessions:
-    new:
-      title: ログインページ
   tasks:
     index:
       title: タスク一覧ページ
@@ -47,17 +50,29 @@ ja:
     update:
       updated: タスクを更新しました
     destroy:
-      destroyed: タスクを削除しました  
+      destroyed: タスクを削除しました
   users:
     new:
       title: アカウント登録ページ
-      error_explanation: 
-      password: パスワード
-      password_confirm: パスワード（確認）
-      confirmation: とパスワードの入力が一致しません
     edit:
       title: アカウント編集ページ
     show:
       title: アカウント詳細ページ
+      name: 名前
+      email: メールアドレス
+    create:
+      created: アカウントを登録しました
+    update:
+      updated: アカウントを更新しました
+  sessions:
+    new:
+      title: ログインページ
+    create:
+      created: ログインしました
+    destroy:
+      destroyed: ログアウトしました
+  notice:
+    login_required: ログインしてください
+
 
 
