@@ -1,9 +1,5 @@
 ja:
  activerecord:
-    models:
-      task: タスク
-      user: ユーザ
-      session: セッション
     attributes:
       task:
         title: タイトル
